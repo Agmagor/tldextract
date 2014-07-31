@@ -224,7 +224,7 @@ class TLDExtract(object):
                 pass
 
         subdomain, _, domain = registered_domain.rpartition('.')
-        return ExtractResult(subdomain, domain, tld)
+        return ExtractResult(subdomain.lower(), domain.lower(), tld.lower())
 
     def update(self, fetch_now=False):
         if os.path.exists(self.cache_file):
