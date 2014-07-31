@@ -317,7 +317,7 @@ def fetch_file(urls):
             return _decode_utf8(s)
 
     LOG.error('No Public Suffix List found. Consider using a mirror or constructing your TLDExtract with `fetch=False`.')
-    return u''
+    return ''
 
 def _decode_utf8(s):
     """ Decode from utf8 to Python unicode string.
